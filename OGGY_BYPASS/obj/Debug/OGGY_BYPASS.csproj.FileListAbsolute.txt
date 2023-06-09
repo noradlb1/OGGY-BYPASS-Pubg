@@ -1,0 +1,3 @@
+C:\Users\MONSTERMC\Desktop\indiaBypass\OGGY_BYPASS\obj\Debug\OGGY_BYPASS.GAME_MEMORY_MAIN.resources
+C:\Users\MONSTERMC\Desktop\indiaBypass\OGGY_BYPASS\obj\Debug\OGGY_BYPASS.csproj.GenerateResource.cache
+C:\Users\MONSTERMC\Desktop\indiaBypass\OGGY_BYPASS\obj\Debug\OGGY_BYPASS.csproj.CoreCompileInputs.cache

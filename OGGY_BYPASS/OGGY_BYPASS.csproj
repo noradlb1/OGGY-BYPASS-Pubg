@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D832B317-DD36-4781-9684-6A9CC7B6481C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OGGY_BYPASS</RootNamespace>
+    <AssemblyName>OGGY_BYPASS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>OGGY_BYPASS.ico</ApplicationIcon>
+    <StartupObject>OGGY_BYPASS.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\OGG2Y_BYPASS\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Memory">
+      <HintPath>..\..\OGG2Y_BYPASS\Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EMULATOR_SELECTOR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GAME_MEMORY_MAIN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GAME_SELECTOR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GAME_STARTER.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Page.Designer.cs">
+      <DependentUpon>Login_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Page.Designer.cs">
+      <DependentUpon>Main_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EMULATOR_SELECTOR.resources" />
+    <EmbeddedResource Include="GAME_MEMORY_MAIN.resources" />
+    <EmbeddedResource Include="GAME_MEMORY_MAIN.resx">
+      <DependentUpon>GAME_MEMORY_MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GAME_SELECTOR.resources" />
+    <EmbeddedResource Include="GAME_STARTER.resources" />
+    <EmbeddedResource Include="Login_Page.resources" />
+    <EmbeddedResource Include="Main_Page.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
